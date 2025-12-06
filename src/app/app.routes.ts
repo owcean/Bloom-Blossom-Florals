@@ -6,7 +6,7 @@ import { Products } from './products/products';
 import { Pagenotfound } from './pagenotfound/pagenotfound';
 
 export const routes: Routes = [
-    {path: '', component: Home},
+    {path: '', component: Home, pathMatch: 'full'},
     {path: 'employee-directory', component: EmployeeDirectory},
     {path: 'about', component: About},
     {path: 'products', component: Products},

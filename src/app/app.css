@@ -1,0 +1,143 @@
+/* --- Color Palette Variables --- */
+/* Ensure these are at the very top of your app.css file */
+:root {
+    --color-primary: #88966e; /* Muted Green (Sage) */
+    --color-secondary: #f0c8c8; /* Soft Pink */
+    --color-text: #463838; /* Dark Brown (Used for text) */
+    --color-background-light: #f0e6dc; /* Creamy Background */
+}
+
+/* --- Navigation Container --- */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--color-background-light); /* Creamy Background */
+    border-bottom: 2px solid var(--color-secondary); /* Subtle soft pink line */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-family: 'Times New Roman', Times, serif;
+    position: sticky; /* Keeps the nav at the top when scrolling */
+    top: 0;
+    z-index: 100;
+}
+
+/* --- Anchor Links and Separators --- */
+nav a {
+    /* Text color is Dark Brown */
+    color: var(--color-text); 
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 15px; 
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* --- Hover and Focus State --- */
+nav a:hover,
+nav a:focus {
+    /* Muted Green on hover */
+    color: var(--color-primary); 
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* --- Router Link Active State (for the currently selected page) --- */
+nav a.active {
+    /* Soft Pink for active link */
+    color: var(--color-secondary); 
+    border-bottom: 2px solid var(--color-secondary);
+    font-weight: bold;
+}
+
+/* --- Separator Styling (The "|" pipe character) --- */
+nav a + a::before {
+    content: "|";
+    color: var(--color-secondary); /* Soft Pink separator */
+    margin-right: 30px; 
+    margin-left: -15px; 
+}
+/* --- FOOTER STYLING --- */
+
+.main-footer {
+    /* Background is the Muted Green (Sage) color */
+    background-color: var(--color-primary);
+    
+    /* FIX: Text color is now Dark Brown (your 'black' substitute) */
+    color: var(--color-text); 
+    
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Soft Pink top border accent */
+    border-top: 5px solid var(--color-secondary); 
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-heading {
+    /* Ensures headings are dark */
+    color: var(--color-text); 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    /* Uses Dark Brown color with opacity for the underline */
+    border-bottom: 2px solid rgba(70, 56, 56, 0.5); 
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    /* Ensures links are Dark Brown */
+    color: var(--color-text); 
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    line-height: 1.8;
+}
+
+.footer-links li a:hover {
+    color: var(--color-secondary); /* Soft Pink on hover for links */
+}
+
+.copyright {
+    margin-top: 20px !important;
+    font-size: 0.85rem !important;
+    opacity: 0.8;
+}
+
+/* Ensure the main content pushes the footer down */
+.content-wrapper {
+    min-height: 70vh; 
+    flex-grow: 1;
+}
+
+/* Flex layout for the entire app */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Media Query for Stacking on Small Screens */
+@media (max-width: 768px) {
+    .main-footer {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}

@@ -1,0 +1,326 @@
+/* --- Color Palette Variables --- */
+:host {
+    /* Muted Green */
+    --color-primary: #88966e; 
+    /* Soft Pink */
+    --color-secondary: #f0c8c8; 
+    /* Dark Brown */
+    --color-text-dark: #463838; 
+    /* Very Pale Pink Background */
+    --color-background-pale: #fce4e4; 
+    /* Cream/White */
+    --color-cream: #f0e6dc;
+    /* Brown/Gold for Primary Button */
+    --color-cta-primary: #af8d5a; 
+    /* Lighter Gold for Secondary Button Border */
+    --color-cta-secondary-border: #d4a973; 
+    
+    --font-heading: 'Times New Roman', Times, serif;
+}
+
+/* === GENERAL STYLES === */
+.page-wrap {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-secondary);
+    display: inline-block;
+}
+
+.section-subheading {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 50px;
+}
+
+/* === 1. HERO SECTION (Two-Column) === */
+.main-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    min-height: 90vh; 
+    background-color: var(--color-background-pale); 
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 8%;
+    max-width: 650px;
+}
+
+.big-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.info {
+    font-size: 1.1rem;
+    color: rgba(70, 56, 56, 0.8);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.pic {
+    background-color: var(--color-secondary); 
+    background-image: url('/images/floral-arrangement.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%; 
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-main {
+    background-color: var(--color-cta-primary);
+    color: white;
+    border: 2px solid var(--color-cta-primary);
+}
+
+.btn-main:hover {
+    background-color: var(--color-text-dark);
+    border-color: var(--color-text-dark);
+}
+
+.btn-light {
+    background-color: transparent;
+    color: var(--color-text-dark);
+    border: 2px solid var(--color-cta-secondary-border);
+}
+
+.btn-light:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    border-color: var(--color-secondary);
+}
+
+/* === 2. PRODUCT SHOWCASE === */
+.product-showcase {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--color-cream);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.p-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.p-card:hover {
+    transform: translateY(-5px);
+}
+
+.p-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid var(--color-primary); /* Muted Green line */
+}
+/* Placeholder images (use your actual image URLs here) */
+.p-img-1 { background-image: url('/image/landing-pic.png'); }
+.p-img-2 { background-image: url('/image/landing-pic.png'); }
+.p-img-3 { background-image: url('/image/landing-pic.png'); }
+
+.p-name {
+    font-size: 1.4rem;
+    color: var(--color-text-dark);
+    margin-top: 15px;
+}
+
+.p-tag {
+    color: var(--color-primary);
+    padding: 10px 15px 20px;
+    font-style: italic;
+}
+
+/* === 3. OUR STORY === */
+.story-section {
+    padding: 80px 5%;
+    background-color: var(--color-background-pale);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.story-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.story-title {
+    margin-bottom: 25px;
+}
+
+.highlight-text {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.story-img {
+    height: 400px;
+    background-color: var(--color-secondary); /* Soft Pink placeholder */
+    background-image: url('/image/landing-pic.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === 4. TESTIMONIALS === */
+.testimonials {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--color-cream);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.t-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--color-secondary);
+    text-align: left;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--color-text-dark);
+}
+
+.client-name {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* === 5. CONTACT & MAP === */
+.contact-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--color-background-pale);
+}
+
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.contact-info-box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.details-list li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--color-text-dark);
+}
+
+.map-placeholder {
+    height: 300px;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* === MEDIA QUERIES === */
+@media (max-width: 900px) {
+    .main-area {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .pic, .story-img, .map-placeholder {
+        height: 50vh;
+    }
+
+    .text-box {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .big-title {
+        font-size: 2.5rem;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+
+    .story-content, .contact-wrap {
+        grid-template-columns: 1fr;
+    }
+}

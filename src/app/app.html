@@ -1,2 +1,33 @@
-<app-header></app-header>
-<app-sills></app-sills>
+<nav>
+  <a routerLink = "/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a> |
+  <a routerLink = "/employee-directory" routerLinkActive="active">Employee</a> |
+  <a routerLink = "/about" routerLinkActive="active">About</a> |
+  <a routerLink = "/products" routerLinkActive="active">Products</a>
+</nav>
+
+<main class="content-wrapper">
+    <router-outlet />
+</main>
+
+<footer class="main-footer">
+    <div class="footer-section">
+        <h3 class="footer-heading">Bloom & Blossom Florals</h3>
+        <p class="copyright">&copy; 2024 Bloom & Blossom Florals. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-section">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+            <li><a routerLink="/about">Our Story</a></li>
+            <li><a routerLink="/products">Shop</a></li>
+            <li><a routerLink="/employee-directory">Our Team</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section contact-info">
+        <h3 class="footer-heading">Contact & Location</h3>
+        <p>123 Flower Lane, City Center</p>
+        <p>Email: info@bloomandblossom.com</p>
+        <p>Phone: (555) 123-4567</p>
+    </div>
+</footer>
